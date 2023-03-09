@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Lista {
     Nodo primero;
+    Nodo segundo;
     Nodo auxiliar;
     String cadena = "";
     
@@ -36,15 +37,15 @@ public class Lista {
     {
         Nodo nuevoNodo = new Nodo(dato);
         
-        if(primero == null)
+        if(segundo == null)
         {
             primero = nuevoNodo;
-            auxiliar = nuevoNodo;
+            segundo = nuevoNodo;
         }
         else
         {
-            primero.siguiente = nuevoNodo;
-            nuevoNodo=auxiliar;
+            segundo.siguiente = nuevoNodo;
+            segundo = nuevoNodo;
         }
         JOptionPane.showMessageDialog(null, "Nodo Encolado");
     }
