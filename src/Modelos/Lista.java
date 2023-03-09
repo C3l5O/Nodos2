@@ -12,6 +12,9 @@ public class Lista {
     public void Apilar(){
     
     }
+    public void Encolar(){
+    
+    }
     
     public void Apilar(int dato)
     {
@@ -29,17 +32,32 @@ public class Lista {
         JOptionPane.showMessageDialog(null, "Nodo APILADO");
     }
     
-    public String Listar() 
+    public void Encolar (int dato)
+    {
+        Nodo nuevoNodo = new Nodo(dato);
+        
+        if(primero == null)
+        {
+            primero = nuevoNodo;
+            auxiliar = nuevoNodo;
+        }
+        else
+        {
+            primero.siguiente = nuevoNodo;
+            nuevoNodo=auxiliar;
+        }
+        JOptionPane.showMessageDialog(null, "Nodo Encolado");
+    }
+        public String Listar() 
     {
         auxiliar = primero;
         cadena = "";
-        while(auxiliar != null)
+        while(auxiliar!= null)
         {
-            cadena = cadena + "["+ auxiliar.getDato()+"]";
+            cadena = cadena + "["+ auxiliar.getDato()+"],";
             auxiliar = auxiliar.siguiente;
         }
-        
-        return cadena;
+        return cadena;   
     }
-    
+
 }
