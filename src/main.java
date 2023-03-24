@@ -14,6 +14,7 @@ public class main {
         
         //LEVANTAR EL CONTROLADOR
         NodoControler nuevoControlador= new NodoControler(VistaPrincipal, VistaNodos, nuevaLista);
+        //Hola
     }
     
 }
